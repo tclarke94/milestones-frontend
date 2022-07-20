@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 
 const ShowChild = (props) => {
     let {id} = useParams();
-    const [baby, setBaby] = useState(null);
+    const [baby, setBaby] = useState([]);
     useEffect(() => {
         fetch( `https://milestones-tracker.herokuapp.com/baby/${id}`)
         .then(res => res.json())
@@ -18,19 +18,22 @@ const ShowChild = (props) => {
     baby.map((baby, index)=> (
         <div key={index} className='display' >
     <div>
-        <img
+         <img
             src = {baby.photo_url}
             alt = {baby.name}
             />
         <h2>{baby.name}</h2>
         <h2>{baby.gender}</h2>
         <h2>{baby.birth_date}</h2>
-        <Link to={`/`}>
+   
+    <Link to={`/`}>
         <h1>Return to Homepage</h1>
         </Link>
-    </div>
-    </div>
+          </div>
+    // </div>
+    
   ))
-   ) }
+  )}
 
 export default ShowChild
+
