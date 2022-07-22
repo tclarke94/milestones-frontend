@@ -11,3 +11,10 @@ Link to Backend :
 https://milestones-tracker.herokuapp.com/baby
 
 Link to Frontend:
+https://62db0fc75aa35c062acb649a--aquamarine-fox-c9d508.netlify.app/
+
+<img width="1264" alt="Screen Shot 2022-07-22 at 3 03 28 PM" src="https://user-images.githubusercontent.com/94505505/180568257-a6aa6a4e-9fb6-4000-914a-d0c3601fc5a4.png">
+
+<img width="1264" alt="Screen Shot 2022-07-22 at 3 03 59 PM" src="https://user-images.githubusercontent.com/94505505/180568289-7ea23d00-cdc2-4833-8e39-246d82a979d2.png">
+
+<img width="1264" alt="Screen Shot 2022-07-22 at 3 04 13 PM" src="https://user-images.githubusercontent.com/94505505/180568310-6f982c36-dddc-43ac-ad8a-97ab1361db37.png">
