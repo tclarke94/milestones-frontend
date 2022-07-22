@@ -36,7 +36,7 @@ const AddChild = () => {
 
 
   return (
-    <div>
+    <div className='add'>
         <form onSubmit={handleSubmit} className='baby-form'>
       <label htmlFor="name">Baby Name: </label>
       <input
@@ -69,10 +69,10 @@ const AddChild = () => {
         onChange={handleChange}
         value={formState.photo}
       />
-            <button type="submit">Submit</button>
+            <button type="submit" className='addSubmit'>Submit</button>
     
             <Link to={`/`} >
-      <h3>Return to Homepage</h3>
+      <h3 className='returnHp'>Return to Homepage</h3>
       </Link>
       </form>
 

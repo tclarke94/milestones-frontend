@@ -1,13 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import { useParams, Link } from 'react-router-dom'
 
-const ShowChild = (props) => {
+const ShowChildren = (props) => {
     let {id} = useParams();
-    console.log(id)
     const [baby, setBaby] = useState([]);
-    console.log(id)
     useEffect(() => {
-        fetch( `https://milestones-tracker.herokuapp.com/baby/${id}`)
+        fetch( `https://milestones-tracker.herokuapp.com/baby`)
         .then(res => res.json())
         .then(res => setBaby(res))
         .catch(console.error)
@@ -17,34 +15,27 @@ const ShowChild = (props) => {
 
 
   return (
- 
+    baby.map((baby, index)=> (
+        <div key={index} className='display' >
     <div>
          <img
             src = {baby.photo_url}
             alt = {baby.name}
             />
-     
-        <h2>{baby.name}</h2>
-     
+        <Link to={`/baby/${baby._id}`}>
+        <h2 className='babyName'>{baby.name}</h2>
+        </Link>
         <h2>{baby.gender}</h2>
         <h2>{baby.birth_date}</h2>
-        <Link to={`/baby/${baby._id}/edit`}>
-        <h1>Edit Baby</h1>
-        </Link>
-        <Link to={`/baby/${baby._id}/delete`}>
-        <h1>Delete Baby</h1>
-        </Link>
-
-
-    <Link to={`/`}>
-        <h1>Return to Homepage</h1>
-        </Link>
-
-          </div>
    
+    <Link to={`/`}>
+        <h1 className='returnHp'>Return to Homepage</h1>
+        </Link>
+          </div>
+    </div>
     
-
+  ))
   )}
 
-export default ShowChild
+export default ShowChildren
 

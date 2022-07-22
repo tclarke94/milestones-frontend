@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const EditChild = () => {
     const initialState = { name: '', birth_date: '' , gender: '', photo_url: ''};
     const [formState, setFormState] = useState(initialState);
+    let {id} = useParams();
+
   
-  
-  const URL = 'https://milestones-tracker.herokuapp.com/baby'
+  const URL = `https://milestones-tracker.herokuapp.com/baby/${id}`
   const navigate= useNavigate()
 
   const handleChange = event => {
@@ -20,7 +21,7 @@ const EditChild = () => {
     event.preventDefault();
   
     await fetch(URL, {
-      method: 'post',
+      method: 'put',
       headers: {
           'Content-Type': 'application/json',
       },
@@ -37,6 +38,7 @@ const EditChild = () => {
 
   return (
     <div>
+       
         <form onSubmit={handleSubmit} className='baby-form'>
       <label htmlFor="name">Baby Name: </label>
       <input

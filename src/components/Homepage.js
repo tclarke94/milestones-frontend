@@ -18,22 +18,22 @@ const Homepage = () => {
     );
   
     return(
-       <div>
+       <div className='home'>
            <h1> Welcome to Milestones Tracker! </h1>
            <Link to={`/add`}>
-        <div className='new-baby-btn'>
+        <div className='new-baby-btn home-btn'>
             <h2>Add a new child to track!</h2>
         </div>
     </Link>
 
     <Link to={`/list`}>
-        <div className='checklist-btn'>
+        <div className='checklist-btn home-btn'>
             <h2>Baby milestone checklist</h2>
         </div>
     </Link>
 
-    <Link to={`/show`}>
-        <div className='show-baby-btn'>
+    <Link to={`/baby`}>
+        <div className='show-baby-btn home-btn'>
             <h2>Check your babies progress</h2>
         </div>
     </Link>

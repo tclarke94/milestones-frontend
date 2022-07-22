@@ -21,7 +21,7 @@ const Checklist = () => {
         
         checklists.map((checklists, index)=> (
             <div key={index} className='display' >
-    <div>
+    <div className='checklist'>
     {/* <Link to={`${checklists._id}`}/> */}
     <h1 key = {checklists.age_range}>{checklists.age_range}</h1>  
    
@@ -31,7 +31,7 @@ const Checklist = () => {
     </div>
 
     <Link to={`/`} >
-      <h3>Return to Homepage</h3>
+      <h3 className='returnHp'>Return to Homepage</h3>
       </Link>
     </div>
     
