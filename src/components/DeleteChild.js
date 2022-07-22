@@ -20,7 +20,7 @@ function DeleteChild(props) {
 
       
    return(
-       <div>
+       <div className='delete'>
         <h1>This will delete all your babies data!</h1>
          <button onClick={handleSubmit} className='delete-btn'>
            Delete

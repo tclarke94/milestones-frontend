@@ -37,7 +37,7 @@ const EditChild = () => {
 
 
   return (
-    <div>
+    <div className='add'> 
        
         <form onSubmit={handleSubmit} className='baby-form'>
       <label htmlFor="name">Baby Name: </label>

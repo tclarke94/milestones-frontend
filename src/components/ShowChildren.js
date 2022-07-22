@@ -27,10 +27,11 @@ const ShowChildren = (props) => {
         </Link>
         <h2>{baby.gender}</h2>
         <h2>{baby.birth_date}</h2>
-   
+   <div>
     <Link to={`/`}>
         <h1 className='returnHp'>Return to Homepage</h1>
         </Link>
+        </div>
           </div>
     </div>
     

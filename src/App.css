@@ -91,3 +91,21 @@
   cursor: pointer;
   text-decoration: none;
 }
+
+.singleBaby {
+  border: black 1px solid;
+  display:grid;
+  place-items:center;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  background-color: beige;
+}
+
+.delete {
+  border: black 1px solid;
+  display:grid;
+  place-items:center;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  background-color: beige;
+}

@@ -18,7 +18,7 @@ const ShowChild = (props) => {
 
   return (
  
-    <div>
+    <div className='singleBaby'>
          <img
             src = {baby.photo_url}
             alt = {baby.name}
